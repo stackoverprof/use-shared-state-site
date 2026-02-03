@@ -41,8 +41,21 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
         <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
           <span className="font-semibold text-white flex items-center gap-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-cyan-400">
-              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" x2="12" y1="2" y2="15"/>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-amber-400"
+            >
+              <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" />
+              <polyline points="16 6 12 2 8 6" />
+              <line x1="12" x2="12" y1="2" y2="15" />
             </svg>
             use-shared-state
           </span>
@@ -67,14 +80,14 @@ export default function Home() {
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-3xl mx-auto text-center">
           <div className="animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm mb-8">
-              <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-amber-500/30 bg-amber-500/10 text-amber-400 text-sm mb-8">
+              <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
               v2.2.1
             </div>
           </div>
 
           <h1 className="animate-fade-in-delay-1 text-5xl sm:text-6xl font-bold tracking-tight mb-6">
-            <span className="gradient-text">Shared state</span>
+            <span className="gradient-text">Sharing state</span>
             <br />
             made simple
           </h1>
@@ -148,20 +161,22 @@ export default function Home() {
       {/* Code Example */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Simple API
-          </h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Simple API</h2>
 
           <div className="space-y-6">
             <div>
-              <p className="text-sm text-zinc-500 mb-2">Memory-only state (shared across components)</p>
+              <p className="text-sm text-zinc-500 mb-2">
+                Memory-only state (shared across components)
+              </p>
               <CodeBlock>{`import useSharedState from "@stackoverprof/use-shared-state";
 
 const [count, setCount] = useSharedState("counter", 0);`}</CodeBlock>
             </div>
 
             <div>
-              <p className="text-sm text-zinc-500 mb-2">Persistent state (localStorage + cross-tab sync)</p>
+              <p className="text-sm text-zinc-500 mb-2">
+                Persistent state (localStorage + cross-tab sync)
+              </p>
               <CodeBlock>{`// Just prefix the key with @
 const [user, setUser] = useSharedState("@user", { name: "John" });`}</CodeBlock>
             </div>
@@ -193,7 +208,8 @@ const [cart] = useSharedState("@cart", []);
               <h3 className="text-lg font-semibold text-white">Without @</h3>
               <CodeBlock>{`useSharedState("counter", 0)`}</CodeBlock>
               <p className="text-sm text-zinc-400">
-                Stored in memory. Shared across components. Lost on page refresh.
+                Stored in memory. Shared across components. Lost on page
+                refresh.
               </p>
             </div>
             <div className="space-y-4">
@@ -210,7 +226,9 @@ const [cart] = useSharedState("@cart", []);
       {/* Utils */}
       <section className="py-20 px-6">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Utilities included</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Utilities included
+          </h2>
           <p className="text-zinc-400 text-center mb-12">
             Manage your shared state programmatically
           </p>
@@ -234,7 +252,7 @@ sharedStateUtils.getPersistentKeys(); // List @ keys only`}</CodeBlock>
           </p>
           <a
             href="https://www.npmjs.com/package/@stackoverprof/use-shared-state"
-            className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-cyan-600 text-white font-medium hover:bg-cyan-500 transition-colors"
+            className="inline-flex items-center justify-center h-12 px-8 rounded-full bg-amber-600 text-white font-medium hover:bg-amber-500 transition-colors"
           >
             npm install @stackoverprof/use-shared-state
           </a>
