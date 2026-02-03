@@ -69,7 +69,7 @@ export default function Home() {
           <div className="animate-fade-in">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/30 bg-cyan-500/10 text-cyan-400 text-sm mb-8">
               <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse" />
-              Zero dependencies
+              v2.2.1
             </div>
           </div>
 
