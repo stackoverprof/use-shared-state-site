@@ -1,6 +1,6 @@
-import type { Route } from "./+types/home";
+import type { MetaFunction } from "react-router";
 
-export function meta({}: Route.MetaArgs) {
+export const meta: MetaFunction = () => {
   return [
     { title: "use-shared-state - React state sharing made simple" },
     {
